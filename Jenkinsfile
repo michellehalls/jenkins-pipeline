@@ -7,22 +7,20 @@ pipeline{
             steps{
                 echo "========executing Build========"
             }
+        stage("Test"){
+            steps{
+                echo "========executing test========"
+            }
             post{
                 success{
-                    echo "========build executed successfully========"
+                    echo "=======test executed successfully========"
                 }
             }
         }
     }
     post{
         always{
-            echo "========always pipeline========"
-        }
-        success{
-            echo "========pipeline executed successfully ========"
-        }
-        failure{
-            echo "========pipeline execution failed========"
+            echo "========always pipeline - sending email========"
         }
     }
 }
