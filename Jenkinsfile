@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                echo "fetch the source code from the directory path specified by the environment variable ($DIRECTORY_PATH)"
+                echo "fetch the source code from the directory path specified by the environment variable"
                 echo "compile the code and generate any necessary artifacts"
             }
         }
@@ -20,7 +20,7 @@ pipeline {
         }
         stage("Security Scan") {
             steps {
-                echo "deploy the application to a testing environment specified by the environment variable named '$TESTING_ENVIRONMENT'"
+                echo "deploy the application to a testing environment specified by the environment variable named "
             }
         }
         stage("Deploy to Staging") {
@@ -30,7 +30,7 @@ pipeline {
         }
         stage("Integration Tests on Staging") {
             steps {
-                echo "deploying the code to the production environment $PRODUCTION_ENVIRONMENT"
+                echo "deploying the code to the production environmentT"
             }
         }
         stage("Deploy to Production"){
